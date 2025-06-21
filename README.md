@@ -5,38 +5,49 @@ This project is a binary image classification model that distinguishes between *
 ## 📁 Dataset
 
 For this used the [Microsoft Dogs vs Cats Dataset](https://www.kaggle.com/datasets/microsoft/catsvsdogs), available on Kaggle, which contains 25,000 labeled images of cats and dogs.
+```bash
+https://www.kaggle.com/datasets/microsoft/catsvsdogs
+```
+- Preprocessing:
+  - Corrupt images removed
+  - Normalized and resized to 224x224
+  - Data augmentation applied (rotation, zoom, flip, shift, etc.)
 
-## 🧠 Model Architecture
+---
+## 🧠 Model Overview
 
-The CNN model consists of:
+- **Type**: Binary Image Classification (Cat = 0, Dog = 1)
+- **Framework**: TensorFlow/Keras
+- **Architecture**:
+  - 4 Convolutional layers
+  - Batch Normalization after each conv layer
+  - MaxPooling layers
+  - Dropout before the dense layers
+  - Final sigmoid activation
 
-- 4 convolutional layers with increasing filters (32 → 256)
-- Batch Normalization after each convolution
-- MaxPooling after each convolution
-- Dropout layer before the dense layer to prevent overfitting
-- Final Dense layer with sigmoid activation for binary classification
-
-### Loss & Optimization
-- **Loss Function**: Binary Crossentropy  
+- **Loss**: Binary Crossentropy  
 - **Optimizer**: Adam  
-- **Evaluation Metric**: Accuracy
+- **Input Size**: 224x224 RGB Images  
 
-## 🧪 Evaluation
+---
 
-Model performance was evaluated using:
+## 📊 Evaluation Results (on Validation Set)
 
-- **Accuracy**
-- **Classification Report** (Precision, Recall, F1-score)
-- **Confusion Matrix**
-- Visualizations on random test images
+| Metric     | Cat (0)  | Dog (1)  |
+|------------|----------|----------|
+| Precision  | 0.85964  | 0.95723  |
+| Recall     | 0.96242  | 0.84261  |
+| F1-score   | 0.90813  | 0.89627  |
+| Support    | 2501     | 2497     |
 
-The final model achieved reasonable accuracy on unseen validation images, with prediction visualizations for both correct and incorrect classifications.
+- **Accuracy**: 90.26%  
+- **Macro Avg F1-score**: 90.22%  
+- **Weighted Avg F1-score**: 90.22%
 
-## 📊 Sample Output
+✅ The model shows high performance with balanced precision and recall for both classes.
 
-| Prediction | True Label | Result |
-|------------|------------|--------|
-| Dog        | Dog        | ✅     |
-| Cat        | Dog        | ❌     |
+---
+
+## 🖼️ Sample Predictions
 
 <![Image](https://github.com/user-attachments/assets/214c9163-650c-4f67-b25a-2b11d40f51c0) width="600"/>
