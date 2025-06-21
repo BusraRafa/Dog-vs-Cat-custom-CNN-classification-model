@@ -39,4 +39,4 @@ The final model achieved reasonable accuracy on unseen validation images, with p
 | Dog        | Dog        | ✅     |
 | Cat        | Dog        | ❌     |
 
-<img src="![Image](https://github.com/user-attachments/assets/79ca62b7-6afa-47c3-b619-5b27a50bbd1c)" alt="Prediction samples" width="600"/>
+<![Image](https://github.com/user-attachments/assets/214c9163-650c-4f67-b25a-2b11d40f51c0) width="600"/>
