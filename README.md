@@ -48,6 +48,6 @@ https://www.kaggle.com/datasets/microsoft/catsvsdogs
 
 ---
 
-## 🖼️ Sample Predictions
+## Sample Predictions
 
-<![Image](https://github.com/user-attachments/assets/214c9163-650c-4f67-b25a-2b11d40f51c0) width="600"/>
+![Image](https://github.com/user-attachments/assets/214c9163-650c-4f67-b25a-2b11d40f51c0) 
